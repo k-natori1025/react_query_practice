@@ -3,6 +3,7 @@ import UseQuery from './UseQuery';
 import UseMutation from './UseMutation';
 import Todo from './Todo';
 import { useQuery } from 'react-query';
+import Test from './Test';
 
 const usersData = [
   {
@@ -52,6 +53,7 @@ function App() {
       {usersQuery.data.map((user) => (
         <p key={user.id}>{user.name}</p>
       ))}
+      <Test />
     </div>
   );
 }

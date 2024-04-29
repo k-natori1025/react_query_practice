@@ -5,7 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
-const queryclient = new QueryClient({
+// プロジェクト全体の、キャッシュの情報やAPIで取得したデータの一元管理　(=Redux, Recoilに近い役割)
+const queryClient = new QueryClient({
   // キャッシュの設定
   defaultOptions: {queries:{staleTime: 5000}}
 });
@@ -13,7 +14,7 @@ const queryclient = new QueryClient({
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <QueryClientProvider client={queryclient}>
+    <QueryClientProvider client={queryClient} initialData={queryClient}>
       <App />
     </QueryClientProvider>
   </React.StrictMode>
