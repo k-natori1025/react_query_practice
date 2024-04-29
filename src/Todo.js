@@ -27,7 +27,7 @@ const Todo = () => {
     mutationFn: () => todos.push({id: "0004", name: "new todo"})
   });
 
-  console.log(todos);
+  // console.log(todos);
 
   return (
     <div>

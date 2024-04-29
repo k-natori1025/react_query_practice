@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 const queryclient = new QueryClient({
+  // キャッシュの設定
   defaultOptions: {queries:{staleTime: 5000}}
 });
 
